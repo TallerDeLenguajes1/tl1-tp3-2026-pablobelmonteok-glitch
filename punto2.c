@@ -18,12 +18,20 @@ int main(){
    strcpy(v[i],Nombre_del_alumno);
    }
    MostrasPersonas(v,5);
-   int id=0;
+int eleccion;
+   printf("Desea buscar por id = 0 y por nombre = 1");
+   scanf("%d",&eleccion);
+   if (eleccion == 0)
+   {
+    int id=0;
     printf("\nColocar id de la persona : ");
     scanf("%d",&id);
 
    BuscarNombre(id,v);
-   char clave[50];
+   }else{
+    if (eleccion == 1)
+    {
+        char clave[50];
    printf("Ingresa la palabra a buscar:");
    scanf("%s",clave);
   int idEncontrado;  
@@ -33,6 +41,9 @@ int main(){
     } else {
         printf("no se encontro el valor buscado\n");
     }
+    }
+    
+   }
 
    for (int j = 0; j < 5; j++)
    {
